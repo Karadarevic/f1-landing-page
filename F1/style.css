@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,700"); /* import Montserrat font  */
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+body {
+    background-color: #6e6565;
+    background-size: cover;
+}
+
+#banner {
+	width:25%;
+	height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home-container {
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: 10px 1fr 1fr 10px;
+    grid-gap: 20px;
+    height: 50vh;
+}
+
+
+#illustration {
+    grid-row: 3;
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    padding: 10px;
+    margin-left: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    #home-container {
+        grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+        grid-template-rows: 1fr;
+    }
+    #inner {
+        grid-column: 2;
+        grid-row: 1;
+        border: solid black 2px;
+        border-radius: 15px;
+        padding: 0.7rem;
+        box-shadow: 2px 2px black;
+    }
+
+    #illustration {
+        grid-column: 3;
+        grid-row: 1;
+    }
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #313030a2;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.4em;
+    color: #332e2e;
+    margin-top: 0;
+    font-weight: bold;
+    text-align: justify;
+    text-indent: 2em;
+    margin-top: 4rem;
+}
+
+
+#car {
+    animation: carIn 1s ease-in-out forwards; /* assign animation to monitor with 'monitorIn' as keyframe name */
+    opacity: 0;
+    width: 80%;
+    height: 80%;
+    border: solid black 0.09rem;
+    border-radius: 15px;
+    box-shadow: rgb(99, 97, 97);
+}
+
+.icons {
+    position: absolute;
+    width: 12%;
+}
+
+
+#senna {
+    margin-top: -4%;
+    margin-left: 9%;
+    animation: chatblips 0.5s ease-in-out 2.7s forwards; /* assign animation to senna with 'chatblips' as keyframe name */
+    opacity: 0;
+    z-index: 2;
+    border: solid black 0.09rem;
+    border-radius: 100%;
+    box-shadow: rgb(99, 97, 97);
+}
+
+#alonso {
+    margin-top: 10%;
+    margin-left: 18%;
+    animation: chatblips 0.5s ease-in-out 1.9s forwards; /* assign animation to alonso with 'chatblips' as keyframe name */
+    opacity: 0;
+    z-index: 2;
+    border: solid black 0.09rem;
+    border-radius: 100%;
+    box-shadow: rgb(99, 97, 97);
+}
+
+#raik {
+    margin-top: 13%;
+    margin-left: -1.5%;
+    animation: chatblips 0.5s ease-in-out 0.8s forwards; /* assign animation to raik with 'chatblips' as keyframe name */
+    opacity: 0;
+    z-index: 2;
+    border: solid black 0.09rem;
+    border-radius: 100%;
+    box-shadow: rgb(99, 97, 97);
+
+}
+
+@keyframes carIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes chatblips {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
